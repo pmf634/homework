@@ -1,0 +1,80 @@
+[0.042][INFO]:      ChromeDriver 26.0.1383.0 C:\RailsInstaller\Ruby1.9.3\bin\chromedriver.exe
+[0.801][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.detach": true,
+   "chromeOptions": {
+      "detach": true
+   },
+   "cssSelectorsEnabled": true,
+   "javascriptEnabled": true,
+   "nativeEvents": false,
+   "platform": "ANY",
+   "rotatable": false,
+   "takesScreenshot": false,
+   "version": ""
+}
+
+[0.805][INFO]:      Using named testing interface
+[10.499][INFO]:     Connected to Chrome successfully. Version: 26.0.1410.64
+[10.866][FINE]:     Command received (/session/5148553060c40275b7c05f89d88b2814)
+[10.867][FINE]:     Command finished (/session/5148553060c40275b7c05f89d88b2814) with response {
+   "sessionId": "5148553060c40275b7c05f89d88b2814",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "26.0.1383.0",
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "windows",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "26.0.1410.64",
+      "webStorageEnabled": true
+   }
+}
+
+[10.878][FINE]:     Command received (/session/5148553060c40275b7c05f89d88b2814/url) with params {
+   "url": "http://www.baidu.com"
+}
+
+[10.878][FINER]:    Waiting for all views to stop loading...
+[10.879][FINER]:    Done waiting for all views to stop loading
+[14.493][FINER]:    Waiting for all views to stop loading...
+[14.495][FINER]:    Done waiting for all views to stop loading
+[14.495][FINE]:     Command finished (/session/5148553060c40275b7c05f89d88b2814/url) with response {
+   "sessionId": "5148553060c40275b7c05f89d88b2814",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[14.499][FINE]:     Command received (/session/5148553060c40275b7c05f89d88b2814/title)
+[14.500][FINER]:    Waiting for all views to stop loading...
+[14.500][FINER]:    Done waiting for all views to stop loading
+[14.565][FINER]:    Waiting for all views to stop loading...
+[14.566][FINER]:    Done waiting for all views to stop loading
+[14.566][FINE]:     Command finished (/session/5148553060c40275b7c05f89d88b2814/title) with response {
+   "sessionId": "5148553060c40275b7c05f89d88b2814",
+   "status": 0,
+   "value": "\u767E\u5EA6\u4E00\u4E0B\uFF0C\u4F60\u5C31\u77E5\u9053"
+}
+
+[14.587][FINE]:     Command received (/session/5148553060c40275b7c05f89d88b2814/url)
+[14.587][FINER]:    Waiting for all views to stop loading...
+[14.588][FINER]:    Done waiting for all views to stop loading
+[14.603][FINER]:    Waiting for all views to stop loading...
+[14.604][FINER]:    Done waiting for all views to stop loading
+[14.604][FINE]:     Command finished (/session/5148553060c40275b7c05f89d88b2814/url) with response {
+   "sessionId": "5148553060c40275b7c05f89d88b2814",
+   "status": 0,
+   "value": "http://www.baidu.com/"
+}
+
