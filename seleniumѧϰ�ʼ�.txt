@@ -1,0 +1,283 @@
+http://lrthw.github.io/intro/
+salary.to
+case  
+
+1、
+
+用户B购买商品后，B加积分，同时分享用户A也加同等积分，B用户发生退款后，B 用户和A用户同时扣同等积分st
+
+
+string="foo,bar,baz"
+
+
+puts str.split(",")
+
+puts str.split(/,*/)
+
+ie.link(:link,'classA').class_name
+
+ie.link(:link,'classA')
+ie.link(:link,'idA').attribute_value('style').invoke('width')
+
+
+ie.divs each do |d|
+
+
+
+  return d if d.html.contains?('onclick')
+end 
+
+
+
+
+
+
+ie.link(:link,'ida').class_name
+
+ie.ie.link(:link,'ida').attribute_value('style').invoke('width')
+
+
+ie.divs each do |do|
+
+ return d if d.html.contains?(onclick)
+
+
+dr.find_element(:id, 'xxxx').send_keys('/path/to/file')
+find_elment(:link_text, '新闻').click
+
+D:\RailsInstaller\Ruby1.9.3\lib\ruby\gems\1.9.1\gems\selenium-webdriver-2.32.1\lib\selenium\webdriver\common
+D:\RailsInstaller\Ruby1.9.3\lib\ruby\gems\1.9.1\gems\selenium-webdriver-2.32.1\lib\selenium\webdriver\remote
+
+
+
+pans=dr.find_elements(:id,ui)
+
+ pans.each do |span|
+  if span == ? 
+span.click
+  end
+
+end 
+
+交谈中请勿轻信汇款、中奖信息、陌生电话，勿使用外挂软件。
+
+回不去的从前  9:28:59
+xpath的语法 (转载自：http://www.cnblogs.com/jianjialin/archive/2009/02/01/1382056.html
+XPath 是XML的查询语言，和SQL的角色很类似。以下面XML为例，介绍XPath 的语法。
+ <?xml version="1.0" encoding="ISO-8859-1"?> <catalog>    <cd country="USA">       <title>Empire Burlesque</title>       <artist>Bob Dylan</artist>       <price>10.90</price>    </cd>    <cd country="UK">      <title>Hide your heart</title>      <artist>Bonnie Tyler</artist>      <price>9.90</price>    </cd>    
+   <cd country="USA">      <title>Greatest Hits</title>      <artist>Dolly Parton</artist>      <price>9.90</price>    </cd></catalog>         </catalog>复制代码
+ 
+定位节点
+XML是树状结构，类似档案系统内数据夹的结构，XPath也类似档案系统的路径命名方式。不过XPath 是一种模式(Pattern)，可以选出 XML档案中，路径符合某个模式的所有节点出来。例如要选catalog底下的cd中所有price元素可以用：
+/catalog/cd/price    
+如果XPath的开头是一个斜线（/）代表这是绝对路径。如果开头是两个斜线（//）表示文件中所有符合模式的元素都会被选出来，即使是处于树中不同的层级也会被选出来。以下的语法会选出文件中所有叫做cd的元素（在树中的任何层级都会被选出来）：
+//cd
+
+
+选择未知的元素
+使用星号（Wildcards,＊）可以选择未知的元素。下面这个语法会选出/catalog/cd 的所有子元素：
+/catalog/cd/*
+以下的语法会选出所有catalog的子元素中，包含有price作为子元素的元素。
+/catalog/*/price
+以下的语法会选出有两层父节点，叫做price的所有元素。
+/*/*/price
+以下的语法会选择出文件中的所有元素。
+//*
+要注意的是，想要存取不分层级的元素，XPath语法必须以两个斜线开头(//)，想要存取未知元素才用星号(*)，星号只能代表未知名称的元素，不能代表未知层级的元素。
+
+
+选择分支
+使用中括号可以选择分支。以下的语法从catalog的子元素中取出第一个叫做cd的元素。XPath的定义中没有第0元素这种东西。
+/catalog/cd[1]
+以下语法选择catalog中的最后一个cd元素：（XPathj并没有定义 first() 这种函式喔，用上例的 [1]就可以取出第一个元素。
+/catalog/cd[last()]
+以下语法选出含有price子元素的所有/catalog/cd元素。
+/catalog/cd[price]
+以下语法选出price元素的值等于10.90的所有/catalog/cd元素
+/catalog/cd[price=10.90]
+以下语法选出price元素的值等于10.90的所有/catalog/cd元素 的price元素
+/catalog/cd[price=10.90]/price
+ 
+选择一个以上的路径
+使用Or操作数(|)就可以选择一个以上的路径。例如：
+/catalog/cd/title | catalog/cd/artist 
+选择所有title以及artist元素
+//title | //artist
+选择所有title以及artist以及price元素
+//title | //artist | //price
+ 
+选择属性
+在XPath中，除了选择元素以外，也可以选择属性。属性都是以@开头。例如选择文件中所有叫做country的属性。
+//@country
+选择所有含有country这个属性的cd元素：
+//cd[@country]
+以下语法选择出含有属性的所有cd元素
+//cd[@*]
+以下语法选择出country属性值为UK的cd元
+//cd[@country='UK']
+ 选择多个属性
+//cd[@country='UK'][@name='hyddd']
+
+知秋一叶  9:29:40
+我去
+有文档吗
+回不去的从前  9:30:19
+本人在用一个叫Selenium的开源工具，其中涉及XPath，有时一个XPath会查出多个结果，这时就在想一个办法解决，例如：//a[contains(@id,'abc')]这样的一个XPath，可能页面中有多个元素id中都包含abc，所以会出现很多，然后想了个办法就是//a[contains(@id,'abc')]后面加[1] [2] [3]这样遍历一下，但不知道为何，总会出现很奇怪的现象，比如//a[contains(@id,'abc')][2]找不到，或者有些元素被跳过，有高手碰到过类似的问题么，有什么办法可以解决一下么？
+问题补充： 
+谢谢大家，问题解决了，在前面加了一个descendant，例如： //descendant::a[contains(@id,'abc')][2]这样就不会出现之前的问题了~~~
+ 
+我来帮他解答 
+2010-11-11 22:13 
+满意回答 
+selenium中 xpath 我一般这样用 xpath="//*/a[@id='xxx' and @class='xxx']"
+要是在一个节点下有多个相同的div，就用div[1][2][3]，要是只有一个就用上面那种形式比较好，或者使用firefox中的插件xpath checker 也可以查出来
+知秋一叶  9:30:37
+你这
+
+ https://github.com/easonhan007/webdriver_guide
+
+
+url = 'http://www.baidu.com'
+puts "now access #{url}"
+dr.get url
+
+
+puts "title of current page is #{dr.title}"
+puts "url of current page is # {dr.current_url}"
+sleep 1 
+dr.quit
+
+
+dr.navigate.back()
+
+dr.navigate.foward()
+
+dr.navigate.forward()
+dr.manage.window.maximize #最大化窗口  dr.manage.window.maximize
+https://github.com/easonhan007/webdriver_guide/blob/master/8/simple_locate.md
+
+
+dr.execute.script('$(argument[0]).hide()',text_filed)
+
+begin
+   dr.find_element(:id,'none')
+
+Begin
+   rescue Selenium::Webdriver::Error ::NoSuchElementError
+ puts "
+end
+puts radio.selected?     displayed?
+
+http://www.sinatrarb.com/intro-zh.html学习站点
+
+alert.text.should eql(xxxxxxxx)
+lambda {alert.accept()}.should_not raise_error
+
+key_up key_down  click send_keys  double_click  click_and_hold releasemove_to context_click drag_and_drop
+
+alert.text.should eql('')
+
+
+
+lamba{alert.accept()}.should_not raise_error
+key_up key_down  double_click click_and_hold drag_and_drop   
+
+
+
+dr.find_element(:name,'file').send_keys('')
+
+sleep(2)
+
+dr.quit()
+
+dr.manage.timeouts.implict_wait = 3
+
+
+dr.manage.timeouts.implict_wait =3
+
+
+dr.manage.page_load =5
+
+driver.manage.script_timeout =3
+
+dr.manage.timeouts.implict_wait ==
+
+
+dr.manage.page_load 
+
+
+dr.manage.script_timeout
+
+client = Selenium::Webdriver::Remote::Http::Default.new
+
+
+client.timeout=
+
+
+client =Selenium::Webdriver::Remote::Http::Default.new
+
+
+client.timeout=120
+
+
+driver =Selenium::Webdriver.for(:chrome,:http_client=>client)
+
+
+
+client =Selenium::Webdriver::Http::Default.new
+
+
+client.timeout =
+
+
+
+driver =Selenium::Webdriver.for(:chrome,:http_client=>client)
+
+
+
+dr = Selenium::Webdriver.for :chrome
+
+
+
+
+url = 'http://www.baidu.com'
+
+
+dr.get.url
+
+p dr.manage.all_cookies
+
+
+
+p dr.manage.delete_all_cookies
+dr.manage.add_cookie(name: 'baidu',value:'xxxx')
+dr.manage.all_cookies
+
+
+dr.manage.delete_all_cookies
+
+
+dr.manage.add_cookie(name: '',value: '')
+
+
+dr.manage.delete_cookie(name)
+
+
+cookie_named
+
+
+http://stackoverflow.com/questions/12503085/watir-webdriver-window-not-found?rq=1
+
+
+http://down.51cto.com/zt/3880
+http://down.51cto.com/zt/4076
+http://down.51cto.com/zt/3880
+browser.table(:class => "sortable")[0].fire_event("onmousedown")
+browser.table(:class => "sortable").row(:index, 0).fire_event("onmousedown")
+browser.row(:id, "account_1").click
+browser.row(:text, /Test Account/).click
+browser.table(:class => "sortable").row(:index, 1).fire_event
+browser.cell(:text, ' Name ').click
+<h1 style="position: relative">Titleness</h1>
+ browser.h1.attribute_value(:style) to get "POSITION: relative"
+parent = browser.div(:class, 'basicGridWrapper').table.trs.find do |tr| tr.td(:text => /DASHBOARD/).present? end parent.td(:index => 2).click
